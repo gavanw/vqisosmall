@@ -32,9 +32,9 @@ Steps:
 
 3) open cmd and navigate this folder
 
-4) type "git clone https://github.com/gavanw/voxelquestiso.git"
+4) type "git clone https://github.com/gavanw/vqisosmall.git"
 
-5) type "cd voxelquestiso"
+5) type "cd vqisosmall"
 
 6) type "explorer ."
 
