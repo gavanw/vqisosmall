@@ -3,7 +3,7 @@ IMPORTANT: FOLLOW INSTALL INSTRUCTIONS!
 ## ADDITIONAL REQUIRED FILES:
 
 Download this and extract as instructed in "installing" below
-https://github.com/gavanw/voxelquestiso/releases/download/0.11/resources.zip
+https://github.com/gavanw/vqisosmall/releases/download/0.1/resources.zip
 
 
 ## Voxel Quest Isometric
