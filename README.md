@@ -114,9 +114,12 @@ esc (press several times): exit
 
 TBD, but for now feel free to fork it and do whatever. :)
 
-## Credits
+## Authors
+Gavan Woolery (http://www.twitter.com/gavanw)
+[ADD YOURSELF DIRECTLY ABOVE HERE, with an optional link]
 
-Lots of stuff: Gavan Woolery
+## Additional Credits
+
 Special Thanks: the 1500+ Kickstarter backers and patrons who made this possible, and my investors for allowing me to open source this.
 
 ## FAQ
