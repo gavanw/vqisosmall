@@ -34,9 +34,7 @@ freeglut/
 glew/
 SFML-2.1/
 util/
-bin/*.*
-temp/*.*
-compiled/*.*
+
 
 lzz.exe
 VoxelQuest/x64/Release/
