@@ -48,11 +48,15 @@ Steps:
 
 VQ uses automatic header generation (via lzz) and also concatenates files and performs other operations with batch scripts. The output file is located in compiled/main.cpp (useful for debugging). However, you should not edit this file as it is generated, you must edit the files that it is based off of (i.e. if you double click on an error in Visual Studio, it will bring up the generated file). The proper workflow is to edit the files within the src folder then run the build (which will generate the large, linear main.cpp file). If you do not like working with generated code, you can always generate it once then disable the scripts and edit the output file(s) by hand.
 
-The rationale for lzz and file concatenation can be found in the links below. In addition, header generation reduces the amount of code you need to maintain (and the number of file locations you must navigate between). Generation with concatenation simplifies the entire use of headers and relieves users of the responsibility of managing include directives. Files are concatenated in alphabetical / numerical order. In other builds I have better forward declaration of headers, inline.
+The rationale for lzz and file concatenation can be found in the links below.
 
 http://stackoverflow.com/a/318440
 
 http://stackoverflow.com/a/373179
+
+In addition, header generation reduces the amount of code you need to maintain (and the number of file locations you must navigate between). Generation with concatenation simplifies the entire use of headers and relieves users of the responsibility of managing include directives. Files are concatenated in alphabetical / numerical order. In other builds I have better forward declaration of headers, inline.
+
+
 
 
 Open "GLSLFragmentLighting.sln" in Visual Studio Express 2012 (https://www.microsoft.com/en-us/download/details.aspx?id=34673)
