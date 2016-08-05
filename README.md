@@ -42,6 +42,7 @@ Steps:
 
 8) open "GLSLFragmentLighting.sln"
 
+9) Make sure build is set to "Release" and "x64" (may likely default to debug/win32 which is bad)
 
 ## Building 
 
