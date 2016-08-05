@@ -35,9 +35,8 @@ glew/
 SFML-2.1/
 util/
 lzz.exe
-temp/
-compiled/
-VoxelQuest/x64/
+VoxelQuest/x64/Release/
+VoxelQuest/x64/Debug/
 *.suo
 *.sdf
 GLSLFragmentLighting.opensdf

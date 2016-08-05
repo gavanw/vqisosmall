@@ -1,3 +1,6 @@
+echo Combine started
+echo %1
+
 @echo off
 
 echo ...
@@ -8,7 +11,7 @@ echo ...
 echo ...
 echo cleaning files
 
-cd %1
+CD /D %1
 
 del /q .\compiled\*.*
 del /q .\temp\*.*

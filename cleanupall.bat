@@ -1,6 +1,7 @@
 ECHO Cleanup Started
+ECHO %1
 
-cd C:\wamp\www\voxelquestiso
+CD /D %1
 :: SET name=%random%
 :: ECHO "%name%"  > .\compiled\main.cpp
 

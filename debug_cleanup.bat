@@ -1,8 +1,7 @@
 ECHO Debug Cleanup Started
+ECHO %1
 
-:: DONT USE THIS, INSTEAD JUST BUILD AND MANUALLY START DEBUGGER
-
-cd C:\wamp\www\voxelquestiso
+CD /D %1
 :: SET name=%random%
 :: ECHO "%name%"  > .\compiled\main.cpp
 
@@ -15,5 +14,6 @@ del /q .\VoxelQuest\x64\Debug\*.*
 del /q .\VoxelQuest\x64\Release\*.*
 
 ECHO running EXE
-cd C:\wamp\www\voxelquestiso\bin
+cd bin
 VoxelQuest.exe
+cd ..
