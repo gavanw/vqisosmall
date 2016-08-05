@@ -13,6 +13,10 @@ echo cleaning files
 
 CD /D %1
 
+mkdir compiled 2> NUL
+mkdir temp 2> NUL
+mkdir bin 2> NUL
+
 del /q .\compiled\*.*
 del /q .\temp\*.*
 
