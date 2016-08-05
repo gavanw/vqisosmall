@@ -763,7 +763,7 @@ enum GUI_STRING_TYPES {
 	E_GST_SS,
 	E_GST_LENGTH
 };
-char* guiStringTypes[] = {
+const char* guiStringTypes[] = {
 	"label",
 	"uid",
 	"ss"
@@ -794,7 +794,7 @@ enum GUI_FLOAT_TYPES {
 	E_GFT_MAXDIMY,
 	E_GFT_LENGTH
 };
-char* guiFloatTypes[] = {
+const char* guiFloatTypes[] = {
 	"type",
 	"divisions",
 	"value",
