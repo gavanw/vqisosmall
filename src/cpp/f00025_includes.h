@@ -44,7 +44,7 @@ const static int MAX_UI_LAYERS = 4;
 
 bool LAST_COMPILE_ERROR = false;
 
-char *BUF_NAMES[] =
+const char* BUF_NAMES[] =
 {
 	"ublock0",
 	"ublock1",
