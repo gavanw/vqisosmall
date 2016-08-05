@@ -1,3 +1,5 @@
+(Note: this is a corrected version of the deprecated repo found at https://github.com/gavanw/voxelquestiso)
+
 IMPORTANT: FOLLOW INSTALL INSTRUCTIONS!
 
 ## ADDITIONAL REQUIRED FILES:
