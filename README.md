@@ -4,13 +4,12 @@ IMPORTANT: FOLLOW INSTALL INSTRUCTIONS!
 
 ## ADDITIONAL REQUIRED FILES:
 
-Download this and extract as instructed in "installing" below
-https://github.com/gavanw/vqisosmall/releases/download/0.1/resources.zip
+Download [this](https://github.com/gavanw/vqisosmall/releases/download/0.1/resources.zip) and extract as instructed in "installing" below
 
 
 ## Voxel Quest Isometric
 
-Voxel Quest is a project with several engine iterations. This is the very first engine iteration, and features isometric voxel rendering. See http://www.voxelquest.com for more info.
+Voxel Quest is a project with several engine iterations. This is the very first engine iteration, and features isometric voxel rendering. See the [voxel quest website](http://www.voxelquest.com) for more info.
 
 Note that this is the earliest engine iteration and many fixes have been made since then, but there is also high demand for the isometric version of the engine so I am releasing that first in spite of the fact that it is the least polished iteration.
 
@@ -28,7 +27,10 @@ If you wish to separate out the requirements, it uses SFML 2.1. If you wish to u
 
 Steps:
 
-1) install git as needed (duh!)
+0) Install Microsoft [Visual Studio Express 2012](https://www.microsoft.com/en-us/download/details.aspx?id=34673). If you already have VS, but its a different version, you must use 2012 as the complilers need to match those used to compile the audio libraries.
+0a) When setting up VS, select custom, then when its setup go to file -> new project -> new visual c++ project -> install compilers (yes, thats right GNU folks, windows doesn't come with a c++ compiler). Be prepaired to wait, as the windows c++ compiler is several gigabytes. 
+
+1) [install git](https://desktop.github.com/) as needed (duh!)
 
 2) create the parent folder where you want to store this repository (note that there will likely be more versions in the future, so you may want one folder to store all of them)
 
@@ -40,7 +42,7 @@ Steps:
 
 6) type "explorer ."
 
-7) extract "resources.zip" to this folder (this link to this file is at the top of this readme)
+7) extract "resources.zip" to this folder (this link to this file is at the top of this readme). This means put all the contents of resources in the vqisosmall directory, not the resources directory with its contents.
 
 8) open "GLSLFragmentLighting.sln"
 
@@ -61,9 +63,9 @@ In addition, header generation reduces the amount of code you need to maintain (
 
 
 
-Open "GLSLFragmentLighting.sln" in Visual Studio Express 2012 (https://www.microsoft.com/en-us/download/details.aspx?id=34673)
+Open "GLSLFragmentLighting.sln" in [Visual Studio Express 2012](https://www.microsoft.com/en-us/download/details.aspx?id=34673)
 
-Simply run "Build Solution" - this will automatically invoke the required scripts during the appropriate build steps.
+Simply run "Build Solution" - this will automatically invoke the required scripts during the appropriate build steps. Make sure to be set for release and 64bit (VS defaults to debug and 32bit).
 
 Prepare for errors! I have only tested this build on two machines!
 
