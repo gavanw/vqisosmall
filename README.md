@@ -28,23 +28,24 @@ If you wish to separate out the requirements, it uses SFML 2.1. If you wish to u
 Steps:
 
 0) Install Microsoft [Visual Studio Express 2012](https://www.microsoft.com/en-us/download/details.aspx?id=34673). If you already have VS, but its a different version, you must use 2012 as the complilers need to match those used to compile the audio libraries.
-0a) When setting up VS, select custom, then when its setup go to file -> new project -> new visual c++ project -> install compilers (yes, thats right GNU folks, windows doesn't come with a c++ compiler). Be prepaired to wait, as the windows c++ compiler is several gigabytes. 
+
+0a) When setting up VS, select custom, then when its setup go to file -> new project -> new visual c++ project -> install compilers. Be prepaired to wait, as the windows c++ compiler is several gigabytes. 
 
 1) [install git](https://desktop.github.com/) as needed (duh!)
 
-2) create the parent folder where you want to store this repository (note that there will likely be more versions in the future, so you may want one folder to store all of them)
+2) Create the parent folder where you want to store this repository (note that there will likely be more versions in the future, so you may want one folder to store all of them)
 
-3) open cmd and navigate this folder
+3) Open cmd and navigate this folder
 
-4) type "git clone https://github.com/gavanw/vqisosmall.git"
+4) Type "git clone https://github.com/gavanw/vqisosmall.git"
 
-5) type "cd vqisosmall"
+5) Type "cd vqisosmall"
 
-6) type "explorer ."
+6) Type "explorer ."
 
-7) extract "resources.zip" to this folder (this link to this file is at the top of this readme). This means put all the contents of resources in the vqisosmall directory, not the resources directory with its contents.
+7) Extract "resources.zip" to this folder (this link to this file is at the top of this readme). This means put all the contents of the resources directory into the vqisosmall directory, not the resources directory itself.
 
-8) open "GLSLFragmentLighting.sln"
+8) Open "GLSLFragmentLighting.sln"
 
 9) Make sure build is set to "Release" and "x64" (may likely default to debug/win32 which is bad)
 
@@ -68,6 +69,9 @@ Open "GLSLFragmentLighting.sln" in [Visual Studio Express 2012](https://www.micr
 Simply run "Build Solution" - this will automatically invoke the required scripts during the appropriate build steps. Make sure to be set for release and 64bit (VS defaults to debug and 32bit).
 
 Prepare for errors! I have only tested this build on two machines!
+
+**Known compile errors**
+* Build Tools v140 cannot be found. See: http://stackoverflow.com/questions/31792663/visual-studio-2013-error-ms8020-build-tools-v140-cannot-be-found
 
 ## Notes on the code
 
