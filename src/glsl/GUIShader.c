@@ -1,3 +1,4 @@
+#version 120
 varying vec3 worldPos;
 varying vec4 viewportPos;
 uniform vec2 windowSize;

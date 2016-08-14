@@ -1,3 +1,4 @@
+#version 120
 
 varying vec3 TexCoord0;
 

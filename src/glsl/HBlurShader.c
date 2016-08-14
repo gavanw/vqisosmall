@@ -1,3 +1,4 @@
+#version 120
 // credit: http://xissburg.com/faster-gaussian-blur-in-glsl/
 
 // result fbo

@@ -1,3 +1,4 @@
+#version 120
 // result fbo
 uniform sampler2D Texture0;
 
