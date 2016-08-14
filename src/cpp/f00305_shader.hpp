@@ -98,6 +98,7 @@ public:
 			doTraceND( "Error validating shader " , i__s(program));
 			LAST_COMPILE_ERROR = true;
 			//popTrace();
+			glDeleteShader(program);
 			return 0;
 		}
 		
