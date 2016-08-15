@@ -74,7 +74,7 @@ public:
 
 	}
 
-	static int validateProgram(GLuint program) {
+	static int validateProgram(GLuint program, string _shaderFile) {
 		//pushTrace("validateProgram()");
 		
 		const unsigned int BUFFER_SIZE = 512;
@@ -95,9 +95,10 @@ public:
 		GLint status;
 		glGetProgramiv(program, GL_VALIDATE_STATUS, &status);
 		if (status == GL_FALSE) {
-			doTraceND( "Error validating shader " , i__s(program));
+			doTraceND( "Error validating shader " , i__s(program), " ", _shaderFile);
 			LAST_COMPILE_ERROR = true;
 			//popTrace();
+
 			glDeleteShader(program);
 			return 0;
 		}
@@ -129,8 +130,6 @@ public:
 	}
 
 	void init(string _shaderFile, bool doBake) {
-		
-		
 		
 		const char* shaderFile = _shaderFile.c_str();
 		
@@ -286,7 +285,7 @@ public:
 					glAttachShader(shader_id, shader_fp);
 					glAttachShader(shader_id, shader_vp);
 					glLinkProgram(shader_id);
-					validateProgram(shader_id);
+					validateProgram(shader_id, _shaderFile);
 
 					delete [] vertCS;
 					delete [] fragCS;
