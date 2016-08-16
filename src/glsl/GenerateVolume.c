@@ -1364,7 +1364,7 @@ void getCobble(vec3 worldPosInPixels) {//, float minSpacing, float maxSpacing) {
 vec4 getTerrain(vec3 worldPosInPixels) {
 
 	vec4 matResult = vec4(0.0);
-
+	
 	float newMult = pixelsPerMeter/128.0;
 
 	float finalMat = 0.0;
@@ -1382,11 +1382,12 @@ vec4 getTerrain(vec3 worldPosInPixels) {
 	float randv = baseRand;
 	vec3 newBlockSizeInPixels = blockMaxBufInPixels.xyz - blockMinBufInPixels.xyz;
 	vec3 voroCoords = (voroPos - blockMinBufInPixels.xyz) / newBlockSizeInPixels;
-	vec4 texVoro = texture3D(Texture4, voroCoords);
+	//vec4 texVoro = texture3D(Texture4, voroCoords); //***
+	vec4 texVoro = vec4(0.0); //***
 	float randVoro = randf(voroCoords.xy);
 	vec3 wCoords = (worldPosInPixels - blockMinBufInPixels.xyz) / newBlockSizeInPixels;
-	vec4 texW = texture3D(Texture4, wCoords); //texture3D //tex3DBiLinear
-	
+	//vec4 texW = texture3D(Texture4, wCoords); //texture3D //tex3DBiLinear //***
+	vec4 texW = vec4(0.0); //***
 	
 	vec2 roughPos = (worldPosInPixels.xy + worldPosInPixels.yz) / worldSizeInPixels.x;
 	vec2 roughVal = vec2(
@@ -1404,10 +1405,12 @@ vec4 getTerrain(vec3 worldPosInPixels) {
 										 0.25,
 										 -mix(randv,snowRand,fIsSnow)
 									 ) * pixelsPerMeter - blockMinBufInPixels.xyz) / newBlockSizeInPixels;
-	vec4 texW2 = texture3D(Texture4, wCoords2);
-	vec4 texW3 = texture3D(Texture4, 
-		(worldPosInPixels +	vec3(0.5,0.5,-0.5) * pixelsPerMeter - blockMinBufInPixels.xyz) / newBlockSizeInPixels	
-	);
+	//vec4 texW2 = texture3D(Texture4, wCoords2); //***
+	vec4 texW2 = vec4(0.0); //***
+	//vec4 texW3 = texture3D(Texture4, //***
+	//	(worldPosInPixels +	vec3(0.5,0.5,-0.5) * pixelsPerMeter - blockMinBufInPixels.xyz) / newBlockSizeInPixels	//***
+	//); //***
+	vec4 texW3 = vec4(0.0); //***
 	
 	
 	
@@ -1573,7 +1576,7 @@ vec4 getTerrain(vec3 worldPosInPixels) {
 	matResult.y = finalMat;
 	matResult.z = 0.0;
 	matResult.w = finalMod;
-
+	
 	return matResult;
 
 
@@ -3143,7 +3146,7 @@ vec4 getGeom(vec3 worldPosInPixels, int iCurMat) {//, float terHeight) {
 
 
 void main() {
-
+	
 
 	int i;
 	int j;
@@ -3192,7 +3195,8 @@ void main() {
 	smoothVal = texture2D(Texture2, 512.0 * worldPosInPixels.xy/worldSizeInPixels.xy ).r;
 
 	vec4 finalRes = vec4(0.0);
-	vec4 finalRes2 = vec4(0.0);
+	//vec4 finalRes2 = vec4(0.0);
+	
 	matResultTer = vec4(0.0);
 	vec4 matResultTree = vec4(0.0);
 	vec4 matResultGeom = vec4(0.0);
@@ -3200,7 +3204,7 @@ void main() {
 	vec4 tempResult;
 
 
-
+	
 
 	if (hasTerrain) {
 		getCobble(worldPosInPixels);
@@ -3245,12 +3249,12 @@ void main() {
 	finalInside = matResult.z;
 	finalMod = matResult.w;
 
+	
+	
 
-
-
-
-
-	vec4 tex2 =  texture3D(Texture1, newCoords);
+	//vec4 tex2 =  texture3D(Texture1, newCoords); //***
+	//vec4 tex2 = texture(Texture1, newCoords); //***
+	vec4 tex2 = vec4(0.0); //***
 	if (tex2.a > 0.5) {
 		finalMat = TEX_DIRT;
 
@@ -3261,7 +3265,7 @@ void main() {
 		}
 	}
 
-
+	
 
 	if (finalMat == TEX_MORTAR) {
 		finalMat = TEX_SAND;
@@ -3275,14 +3279,14 @@ void main() {
 	if ( (finalMat >= TEX_SHINGLE) && (finalMat < TEX_PLASTER) ) {
 		finalMod = clamp(shingleMod, 0.0, 1.0);
 	}
-
+	
 
 	// if (finalMat == TEX_BRICK) {
 	// 	finalMat = TEX_DIRT;
 	// }
 	
 	//
-
+	
 	if (finalMat == TEX_DIRT) {
 		fj = clamp(
 			(
@@ -3296,7 +3300,7 @@ void main() {
 		finalMat = TEX_EARTH + floor(fj);
 		finalMod = fj - floor(fj);
 	}
-
+	
 	//TODO: ADD BACK IN FOR WATER
 	if (
 
@@ -3348,12 +3352,14 @@ void main() {
 	//finalMod = voroGrad;
 
 	finalLayer = min(finalLayer, totLayers - 1.0);
-
+	
+	
 	finalRes.a = finalMat / 255.0;
 	finalRes.r = finalLayer;
 	finalRes.b = (finalMod * 127.0) / 255.0; //finalMod
 	//0.75; // blend amount
 	finalRes.g = finalNormUID / 255.0;
+	
 
 	//finalMod = abs(sin(worldPosInPixels.z/(1.0*pixelsPerMeter)));
 	//finalMod = matResult.w;

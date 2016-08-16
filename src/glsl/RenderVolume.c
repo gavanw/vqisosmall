@@ -1,3 +1,4 @@
+#version 120
 //uniform sampler3D Texture0; //volume texture
 uniform sampler2D Texture0; // volume layer 0
 uniform sampler2D Texture1; // volume layer 1 (unused now)

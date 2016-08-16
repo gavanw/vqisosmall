@@ -44,3 +44,14 @@ VoxelQuest/x64/Debug/
 *.suo
 *.sdf
 GLSLFragmentLighting.opensdf
+GLSLFragmentLighting.VC.opendb
+x64/Release/freeglut.dll
+x64/Release/sfml-window-2.dll
+x64/Release/sfml-network-2.dll
+x64/Release/libsndfile-1.dll
+x64/Release/sfml-system-2.dll
+x64/Release/VoxelQuest.pdb
+x64/Release/sfml-audio-2.dll
+x64/Release/openal32.dll
+x64/Release/glew32.dll
+x64/Release/sfml-graphics-2.dll

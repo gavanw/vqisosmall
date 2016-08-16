@@ -1,3 +1,4 @@
+#version 120
 // Adapted from:
 // http://callumhay.blogspot.com/2010/09/gaussian-blur-shader-glsl.html
 

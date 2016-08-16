@@ -1,3 +1,4 @@
+#version 120
 // pages fbo
 uniform sampler2D Texture0;
 uniform sampler2D Texture1;
