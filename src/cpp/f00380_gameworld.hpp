@@ -1644,8 +1644,8 @@ DO_RETURN_PP:
 		
 		float scale = 1.0f*((float)(singleton->pixelsPerMeter));
 		
-		
-		glLineWidth(0);
+		//error when valie is <= 0
+		//glLineWidth(0);
 		
 		
 		
